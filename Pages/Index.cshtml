@@ -7,23 +7,26 @@
 <div style="background-color:#00ffff">
     <header class="text-center">
         <h1 class="display-4">Welcome to razor pages</h1>
-        <h2>by @Model.FirstName </h2>
+        <h2>by @Model.FullName </h2>
     </header>
 
     <form method="post" class="mx-auto" style="width:200px">
         <br/><br/>
         <p class="col-sm-2">
             <label for="name">Name</label>
-            <input type="text" name="name">
+            <input type="text" required="true" placeholder="Your full name" asp-for="FullName">
         </p>
         <p class="col-sm-4">
             <label for="email">Email</label>
-            <input type="email" name="email">
+            <input type="email" required="true" placeholder="Your email address" name="email">
         </p>
         <p class="col-sm-2">
             <button type="submit" class="btn btn-primary">
                 Register
             </button>
+        </p>
+        <p class="col-sm-12">
+            @ViewData["Message"]
         </p>
     </form>
 
