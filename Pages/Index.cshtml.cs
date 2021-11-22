@@ -10,6 +10,8 @@ namespace RazorCurrencyConverter.Pages
 {
     public class IndexModel : PageModel
     {
+        public string FirstName { get; set; }
+
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger)
@@ -18,6 +20,11 @@ namespace RazorCurrencyConverter.Pages
         }
 
         public void OnGet()
+        {
+            FirstName = "Brian";
+        }
+
+        public void OnPost()
         {
 
         }
