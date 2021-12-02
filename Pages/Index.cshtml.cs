@@ -27,15 +27,16 @@ namespace RazorCurrencyConverter.Pages
 
         public void OnPost()
         {
-            if(String.IsNullOrWhiteSpace(FullName))
+            if (String.IsNullOrWhiteSpace(FullName))
             {
-                ViewData["Message"] = "Name is Missing!";
+                ViewData["Message"] = "Name is missing";
                 FullName = "Anonymous";
             }
             else
             {
-                ViewData["Message"] = "Name is Registered";
-                // Register the user
+                ViewData["Message"] = "Name is registered!";
+                //Register the user
+
             }
         }
     }
