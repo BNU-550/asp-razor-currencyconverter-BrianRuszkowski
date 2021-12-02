@@ -12,7 +12,7 @@ namespace RazorCurrencyConverter.Pages
     {
         public class ConverterRazorPageModel : PageModel
         {
-            public const double GBP_TO_EUR = 1.00;
+            public const double GBP_TO_EUR = 1.17;
 
             [BindProperty]
             public double InputGBP { get; set; }
